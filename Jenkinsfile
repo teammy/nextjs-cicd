@@ -4,7 +4,7 @@ pipeline  {
     stages {
         stage('Checkout Code') {
             steps {
-                echo 'Building..'
+                echo 'Building..aaddd'
             }
         }
         stage('Build Nextjs App') {
