@@ -2,19 +2,14 @@ pipeline  {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Build Image') {
             steps {
-                echo 'Building..aaddd'
-            }
-        }
-        stage('Build Nextjs App') {
-            steps {
-                echo 'Testing..'
+                sh 'docker build -t nextjscicd:latest .'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'docker run -d -p 4334:3000 nextjscicd:latest'
             }
         }
     }
