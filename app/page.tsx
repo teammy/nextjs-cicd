@@ -4,7 +4,7 @@ type Props = {}
 
 const NextjsPage = (props: Props) => {
   return (
-    <div>NextjsPage CiCd</div>
+    <div>NextjsPage On Prod.</div>
   )
 }
 
